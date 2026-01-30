@@ -1,1 +1,105 @@
-<PASTE_YAML_CONTENT>
+ARTORANGE_KNOWLEDGE_FINAL:
+  meta:
+    name: ARTORANGE_VISUAL_SYSTEM
+    version: "1.0.0"
+    purpose: "Direção de Arte e CRO para produtos low ticket"
+    principle: "Clareza > Estética | Conversão > Criatividade"
+
+  core_rules:
+    zero_friction: true
+    one_message_per_asset: true
+    mobile_first: true
+    design_must_justify_itself: true
+    aesthetic_without_function_is_forbidden: true
+
+  palette:
+    cta_orange: "#FF6B35"
+    progress_green: "#A8E063"
+    text_charcoal: "#2D3142"
+    background_white: "#FFFFFF"
+    card_gray: "#F4F4F6"
+    highlight_yellow: "#FFC857"
+
+  typography:
+    primary: "Poppins"
+    secondary: "Inter"
+    max_fonts: 2
+    hierarchy_levels: 3
+    min_body_px: 16
+    rules:
+      - "Nunca usar Poppins para parágrafos longos"
+      - "Texto sempre legível em 360px de largura"
+
+  layout_rules:
+    margin_min_px_1080: 40
+    card_radius_px: 16
+    max_text_blocks_per_asset: 3
+    shadows:
+      allowed: true
+      style:
+        blur: 20
+        opacity: 0.1
+        offset_y: 4
+    spacing_priority: "Respiro > Informação"
+
+  components:
+    logo:
+      variants:
+        - horizontal_primary
+        - compact_avatar
+        - monochrome
+        - negative
+      underline_color: "#FF6B35"
+      clear_space_rule: "Altura do número 7 em todos os lados"
+      forbidden:
+        - "gradientes"
+        - "contornos"
+        - "sombras pesadas"
+    badge:
+      text: "7 DIAS"
+      shape: "pill"
+      color: "#A8E063"
+      usage_rule: "Sempre que houver promessa de prazo"
+    progress:
+      types:
+        - day_icons_1_to_7
+        - progress_bar
+      states:
+        pending: "#F4F4F6"
+        active: "#FF6B35"
+        complete: "#A8E063"
+
+  disclaimers:
+    positioning: "Rodapé"
+    opacity: 0.6
+    font_size_px: [10, 12]
+    variants:
+      business: "Resultados variam conforme execução e mercado."
+      health: "Conteúdo educativo. Não substitui aconselhamento médico profissional."
+      behavior: "Resultados dependem de consistência e aplicação individual."
+
+  production_pipeline:
+    description: "Pipeline oficial da Fábrica Low Ticket IA-First"
+    steps:
+      - ARTORANGE_define_identity
+      - CREATIVEORANGE_generate_copy
+      - CREATIVEORANGE_ASSETS_generate_layouts
+      - DESIGNERORANGE_execute_final_assets
+    definition_of_done:
+      - "Legível em mobile (360px)"
+      - "Uma mensagem por asset"
+      - "CTA visível e específico"
+      - "Disclaimer correto para o nicho"
+      - "Consistência com paleta e tipografia"
+
+  audit_checks:
+    - "Este asset direciona o olhar para o CTA?"
+    - "Existe ruído visual removível?"
+    - "A hierarquia é clara em 3 segundos?"
+    - "O design ajuda a vender ou só parece bonito?"
+
+  forbidden:
+    - "Design artístico sem função"
+    - "Poluição visual"
+    - "Texto longo em imagem"
+    - "Inversão de cores fora de botões"

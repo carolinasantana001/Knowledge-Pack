@@ -1,0 +1,276 @@
+KNOWLEDGE_PACK:
+  meta:
+    name: "ORANGE_IG_FACTORY_KNOWLEDGE"
+    version: "1.0.0"
+    language: "pt-BR"
+    purpose: "Operação padronizada de Instagram para venda de low ticket (conteúdo + criativos + anúncios)."
+    rule: "Sistema > criatividade. Conversão > estética."
+
+  global_rules:
+    business_rule_non_negotiable:
+      description: "Todo post deve preparar ou realizar venda."
+      valid_if_any:
+        - "aumenta consciência do problema"
+        - "amplifica dor/custo de não agir"
+        - "posiciona solução/mecanismo"
+        - "remove objeções de compra"
+      invalid_examples:
+        - "motivacional genérico"
+        - "conteúdo 'legal' sem ponte para oferta"
+        - "bastidor sem aprendizado acionável"
+    objective_priority:
+      primary: ["clique", "compra"]
+      secondary_only_if_supports_conversion: ["salvamento", "comentário"]
+    mobile_first_constraints:
+      max_words_per_block: 10
+      max_lines_per_slide: 3
+      min_font_size_mobile_px: 34
+      contrast_required: true
+      one_message_per_asset: true
+    anti_noise_policy:
+      allowed_only_if_improves: ["clareza", "leitura", "confiança", "clique"]
+      forbidden: ["enfeite", "efeito visual sem função", "poluição", "texto longo"]
+    compliance_safety:
+      do_not:
+        - "prometer resultado garantido"
+        - "fingir prova que não existe"
+        - "urgência/escassez falsa"
+      if_sensitive_niche: "acionar COMPLIANCE_EVIDENCE antes de tráfego"
+
+  identity_system:
+    palette:
+      sage_mint: "#A8CBB7"
+      white: "#FFFFFF"
+      black: "#111111"
+      coral_cta: "#FF5A6E"
+      neutral_gray: "#EDEDED"
+    typography:
+      title: "Sans modern bold (ex: Inter / Montserrat / Sora)"
+      body: "Sans modern regular (mesma família ou Inter)"
+      limit_fonts: 2
+      hierarchy_levels: 3
+    layout_tokens:
+      grid: "12-col desktop / 4-col mobile"
+      spacing_scale_px: [8, 16, 24, 32, 48]
+      safe_area:
+        feed: "80px topo/rodapé"
+        story: "180px topo/rodapé (UI)"
+    brand_style:
+      mood: ["minimalista", "alto contraste", "direto", "escaneável"]
+      forbiddens: ["gradientes confusos", "fontes decorativas", "muitos ícones", "background poluído"]
+
+  CREATIVEORANGE_IG:
+    role: "Estratégia e produção de conteúdo para Instagram com foco em low ticket."
+    gate_inputs_required:
+      product:
+        fields: ["nome", "preço", "promessa_curta"]
+      audience:
+        fields: ["quem_paga", "dor_principal", "situação_atual"]
+      proof:
+        allowed: ["prints", "depoimentos", "preview", "experiência_própria", "nenhuma"]
+    content_pillars:
+      ratio:
+        education: 0.6
+        connection: 0.3
+        direct_sales: 0.1
+      connection_limits:
+        allowed: ["autoridade", "prova social", "bastidores estratégicos", "valores ligados à solução"]
+        forbidden: ["desabafo", "rotina vazia", "storytelling sem aprendizado acionável"]
+      sales_rules:
+        must_include: ["oferta explícita", "preço ou ancoragem", "CTA externo claro"]
+        forbidden: ["soft sell", "CTA fraco", "convite implícito"]
+    weekly_calendar:
+      seg: "Educação"
+      ter: "Conexão"
+      qua: "Educação"
+      qui: "Conexão"
+      sex: "Educação"
+      sab: "Venda"
+      dom: "Conexão"
+    output_contract_per_post:
+      required:
+        - "ideia_central"
+        - "hook_1_linha"
+        - "estrutura (carrossel slide-a-slide OU roteiro reel 15-30s)"
+        - "legenda"
+        - "CTA contextualizado"
+        - "objetivo (clique/compra preferencial)"
+    deliverables_templates:
+      plan_7_days:
+        description: "7 posts seguindo calendário padrão, cada um completo."
+      bank_30_ideas:
+        description: "30 ideias (18 Edu / 9 Con / 3 Venda) com 5 hooks cada."
+      dark_post_mode:
+        description: "Versões para anúncios: copy curta + criativo sugerido + CTA externo."
+        rules:
+          hook_first_2_seconds: true
+          no_follow_cta: true
+          CTA_external_only: true
+
+    frameworks:
+      hooks_library:
+        cold_traffic_formulas:
+          - "Pare de [erro comum] se você quer [resultado]."
+          - "Você está fazendo [coisa] e por isso [consequência]."
+          - "O jeito mais rápido de [resultado] sem [objeção]."
+          - "[número] sinais de que você está [situação ruim] e não percebeu."
+          - "A verdade sobre [tema] que ninguém te fala: [ponto de contraste]."
+      carousel_structures:
+        - name: "Dor -> Causa -> Micro-solucao -> CTA"
+          slides:
+            - "Capa: benefício/contraste"
+            - "Dor: cena real"
+            - "Erro: por que falha"
+            - "Causa: mecanismo simples"
+            - "Micro-solucao: 3 passos"
+            - "CTA: próximo passo"
+        - name: "Checklist -> Correção -> Prova/Preview -> CTA"
+          slides:
+            - "Capa: checklist"
+            - "Item 1 (erro)"
+            - "Item 2 (erro)"
+            - "Item 3 (erro)"
+            - "Correção rápida"
+            - "Preview do produto"
+            - "CTA"
+      reel_script_structures:
+        - name: "2s Hook + 3 beats + CTA"
+          beats:
+            - "0-2s: hook agressivo"
+            - "2-8s: cena real/dor"
+            - "8-18s: 3 bullets solução"
+            - "18-25s: prova/preview"
+            - "25-30s: CTA"
+      captions:
+        structure:
+          - "Hook 1 linha"
+          - "Contexto 2 linhas"
+          - "3 bullets de valor"
+          - "Micro-prova ou preview"
+          - "CTA"
+
+    CTA_library:
+      external_ctas:
+        quiz: ["Faça o quiz agora", "Descubra seu perfil no quiz", "Responda e veja o resultado"]
+        checkout: ["Baixar agora", "Comprar agora", "Acessar por R$X"]
+        dm: ["Me chama no direct com a palavra: X", "Envie 'X' no direct"]
+      weak_ctas_forbidden:
+        - "link na bio (sem contexto)"
+        - "me segue"
+        - "comenta aí (sem objetivo)"
+
+    objection_map_low_ticket:
+      common_objections:
+        - objection: "Isso funciona pra mim?"
+          response_assets: ["quiz segmentador", "preview do conteúdo", "garantia simples"]
+        - objection: "Parece básico"
+          response_assets: ["mecanismo claro", "checklist prático", "aplicação imediata"]
+        - objection: "Não tenho tempo"
+          response_assets: ["passos curtos", "rotina de 10 min", "uso no celular"]
+        - objection: "Já tentei antes"
+          response_assets: ["erro comum + correção", "diferenciação do método", "caso/print se houver"]
+
+  CREATIVEORANGE_LOCK:
+    overrides:
+      - "Não gerar conteúdo sem gate inputs."
+      - "Não otimizar para engajamento se não suportar clique/compra."
+      - "Proibir textão. Se necessário, quebrar em slides."
+      - "Se não houver prova, substituir por preview do método."
+      - "Se algo não prepara venda, descartar."
+    definition_of_done:
+      - "7 dias: calendário completo + cada post com hook/estrutura/legenda/CTA/objetivo"
+      - "30 ideias: proporção correta + 5 hooks cada"
+      - "Modo anúncio: variações curtas + CTA externo + criativo sugerido"
+
+  CREATIVEORANGE_IG_ASSETS:
+    role: "Geração de criativos (feed, story, carrossel, reels) com foco em CTR e conversão."
+    asset_types:
+      feed_single:
+        size: "1080x1350"
+        layout_rules:
+          - "headline grande 6-10 palavras"
+          - "subtexto 1 linha"
+          - "CTA coral/rosa"
+          - "1 ícone no máximo"
+      story:
+        size: "1080x1920"
+        layout_rules:
+          - "safe area respeitada"
+          - "CTA destacado"
+          - "1 mensagem"
+      carousel:
+        size: "1080x1350"
+        slide_rules:
+          cover:
+            - "benefício + contraste"
+            - "texto mínimo"
+          inner:
+            - "bullets curtos"
+            - "um conceito por slide"
+          last:
+            - "CTA explícito + próximo passo"
+      reels:
+        duration: "10-20s preferencial (até 30s)"
+        rules:
+          - "hook nos 2s"
+          - "texto na tela curto"
+          - "cortes rápidos"
+          - "CTA final"
+    creative_patterns_priority:
+      - "Antes vs Depois"
+      - "Negativo vs Positivo"
+      - "Checklist visual"
+      - "Preço ancorado"
+      - "Preview do produto"
+    output_contract_per_angle:
+      per_angle_deliver:
+        - "3 variações feed (texto exato + layout descrito)"
+        - "1 story"
+        - "1 roteiro reels"
+        - "prompt de imagem IA (se solicitado)"
+        - "notas de Canva/Figma (grid, margens, fonte, contraste)"
+    generator_prompts_style:
+      prompt_rules:
+        - "clean ad style"
+        - "alta legibilidade"
+        - "fundo simples"
+        - "sem poluição"
+        - "evitar estética artística"
+      examples:
+        - "Foto minimalista, fundo neutro, iluminação suave, estilo anúncio, espaço negativo para texto, alta clareza."
+
+  QA_CHECKLIST_WEEKLY:
+    metrics_to_track:
+      - "CTR (criativo/anúncio)"
+      - "CPC"
+      - "cliques para página"
+      - "taxa de conversão página"
+      - "vendas"
+    qa_questions:
+      - "O post prepara venda ou vende?"
+      - "Hook é entendível em 2s?"
+      - "Uma mensagem por peça?"
+      - "CTA está específico e externo?"
+      - "Design respeita mobile e contraste?"
+      - "Há prova/preview? Se não, há método?"
+    kill_criteria_examples:
+      - scenario: "Anúncio"
+        rule: "Se CTR muito baixo após X impressões, trocar criativo."
+      - scenario: "Conteúdo orgânico"
+        rule: "Se não gerar cliques por 2 semanas, aumentar posts de venda e CTA."
+
+  integration_notes:
+    recommended_gem_split:
+      - gem: "CREATIVEORANGE_IG"
+        responsibility: "estratégia e produção textual (posts/roteiros/legendas)"
+      - gem: "CREATIVEORANGE_IG_ASSETS"
+        responsibility: "criativos e prompts visuais"
+      - gem: "ARTORANGE"
+        responsibility: "direção de arte/CRO macro e tokens"
+      - gem: "DESIGNERORANGE"
+        responsibility: "implementação (HTML/site) quando necessário"
+    handoff_contracts:
+      creative_to_assets:
+        required_fields: ["hook", "promessa_curta", "CTA", "ângulo", "objetivo"]
+      assets_to_ads:
+        required_fields: ["variações", "texto_exato", "formato", "CTA_externo"]
